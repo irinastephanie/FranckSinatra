@@ -7,8 +7,9 @@
       <p>Bonjour et bienvenue! La liste des points arrive bientôt, en attendant, tu peux aller sur 
         <a href="/gossips/new/">créer un gossip</a>
   </body>
-  <% gossips.each do |gossip| %>
+  <% gossips.each_with_index do |gossip, index| %>
     <p> 
+      <%= index+1%>
       <%= gossip.author %><br/>
       <%= gossip.content %>
       </p>

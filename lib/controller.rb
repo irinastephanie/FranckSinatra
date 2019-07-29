@@ -22,4 +22,7 @@ class ApplicationController < Sinatra::Base
   #puts "ca déchire"
   redirect '/'
   end
+  get '/gossips/:id/' do |id|
+    erb :show, locals: {id: id, gossip: Gossip.find(id.to_i - 1)}
+  end
 end 
